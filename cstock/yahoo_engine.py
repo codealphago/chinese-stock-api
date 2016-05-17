@@ -1,17 +1,10 @@
-#    Copyright (c) 2015 Walt Chen
-#
-#    Licensed under the Apache License, Version 2.0 (the "License"); you may
-#    not use this file except in compliance with the License. You may obtain
-#    a copy of the License at
-#
-#         http://www.apache.org/licenses/LICENSE-2.0
-
 import re
 import json
 import datetime
 
 from cstock.base_engine import Engine
 from cstock.model import Stock, ParserException
+
 
 class YahooEngine(Engine):
     """
@@ -60,7 +53,7 @@ class YahooEngine(Engine):
             if lineno == 1:
                 continue
 
-            values = line.split(',') 
+            values = line.split(',')
             stocks.append(self._generate_stock(values, stock_id))
 
         return tuple(stocks)
@@ -78,7 +71,6 @@ class YahooEngine(Engine):
             close=obj[4],
             volume=obj[5]
         )
-        
 
 
-__all__ = ['YahooEngine'] 
+__all__ = ['YahooEngine']

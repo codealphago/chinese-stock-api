@@ -1,10 +1,16 @@
 
+This project is forked from [Walt Chen](https://github.com/godsarmy/chinese-stock-api/zipball/master).
+Mr chen seems do not continue this project.
+-----
 Library to get Chinese stock price
 
 Supported Engines:
  - Hexun API
  - Sina Finance API
  - Yahoo Finance API
+
+Requirements:
+ - Python 2.7.11
 
 Usage:
     
@@ -19,6 +25,3 @@ stock = requester.request('000626')
 print stock.as_dict()
 ```
 
-* [Download the latest release](https://github.com/godsarmy/chinese-stock-api/zipball/master).
-* Clone the repo: `git clone git://github.com/godsarmy/chinese-stock-api.git`.
-* [Download from pypi](https://pypi.python.org/pypi/chinesestockapi).

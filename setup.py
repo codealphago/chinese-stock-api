@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-NAME = 'chinesestockapi'
-VERSION = '1.4'
-DESCRIPTION = 'Python API to get Chinese stock price'
+NAME = 'chinesestockapi_py2'
+VERSION = '1.0'
+DESCRIPTION = 'Python API to get Chinese stock price for python 2.7'
 LONG_DESCRIPTION = """\
 Library to get Chinese stock price
 
@@ -25,11 +25,10 @@ Usage:
 
  print stock.as_dict()
 
-Github Site: https://github.com/godsarmy/chinese-stock-api.
 """
-AUTHOR = 'Walt Chen'
-AUTHOR_EMAIL = 'godsarmycy@gmail.com'
-URL = 'https://pypi.python.org/pypi/chinesestockapi'
+AUTHOR = 'Roy Liu'
+AUTHOR_EMAIL = 'roystd@qq.com'
+URL = 'https://pypi.python.org/pypi/chinesestockapi_py2'
 PLATFORM = 'any'
 LICENSE = 'Apache Software License'
 

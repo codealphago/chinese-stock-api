@@ -1,17 +1,10 @@
-#    Copyright (c) 2015 Walt Chen
-#
-#    Licensed under the Apache License, Version 2.0 (the "License"); you may
-#    not use this file except in compliance with the License. You may obtain
-#    a copy of the License at
-#
-#         http://www.apache.org/licenses/LICENSE-2.0
-
 import re
 import json
 import datetime
 
 from cstock.base_engine import Engine
 from cstock.model import Stock, ParserException
+
 
 class HexunEngine(Engine):
     """
@@ -26,7 +19,7 @@ class HexunEngine(Engine):
 
         self.shanghai_transform = lambda sid: "0%s" % sid
         self.shenzhen_transform = lambda sid: "1%s" % sid
- 
+
     def get_url(self, stock_id, date=None):
         if date is not None:
             raise ParserException("Hexun Engie does not accept date")
@@ -59,7 +52,7 @@ class HexunEngine(Engine):
     def _generate_stock(obj):
         """obj structure is {'1000626': {'code': ...}}
         """
-        stock = obj.values()[0]        
+        stock = obj.values()[0]
 
         code = stock.get('code', None)
         if code is not None:
@@ -91,6 +84,7 @@ class HexunEngine(Engine):
             high=stock.get('high', None),
             volume=stock.get('volume', None),
             turnover=stock.get('turnover', None),
-        )                
+        )
+
 
 __all__ = ['HexunEngine']
