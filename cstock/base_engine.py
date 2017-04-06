@@ -68,6 +68,12 @@ class Engine(object):
         :rtype:
             ``str``
         """
+        if stock_id.endswith('.SH'):
+            return self.shanghai_transform(stock_id.replace('.SH', ''))
+
+        if stock_id.endswith('.SZ'):
+            return self.shenzhen_transform(stock_id.replace('.SZ', ''))
+
         if stock_id.startswith('0') or stock_id.startswith('3'):
             return self.shenzhen_transform(stock_id)
 
